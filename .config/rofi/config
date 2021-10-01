@@ -1,0 +1,5 @@
+rofi.combi-modi:    window,run,drun,ssh
+rofi.font:          Roboto 12
+rofi.modi:          combi,run,window
+
+rofi.theme: /usr/share/rofi/themes/Pop-Dark.rasi
