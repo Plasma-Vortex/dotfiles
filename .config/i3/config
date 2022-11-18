@@ -74,7 +74,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+c focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -129,7 +129,7 @@ mode "resize" {
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
         # Think of it as moving the bottom-right corner of the window
-		bindsym j resize grow height 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
         bindsym l resize shrink width 10 px or 10 ppt
         bindsym semicolon resize grow width 10 px or 10 ppt
@@ -148,34 +148,17 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-mode "s" {
-	bindsym $mod+Ctrl+1 workspace $ws1
-	bindsym $mod+Ctrl+2 workspace $ws2
-	bindsym $mod+Ctrl+3 workspace $ws3
-	bindsym $mod+Ctrl+4 workspace $ws4
-	bindsym $mod+Ctrl+5 workspace $ws5
-	bindsym $mod+Ctrl+6 workspace $ws6
-	bindsym $mod+Ctrl+7 workspace $ws7
-	bindsym $mod+Ctrl+8 workspace $ws8
-	bindsym $mod+Ctrl+9 workspace $ws9
-	bindsym $mod+Ctrl+0 workspace $ws10
-	
-    bindsym $mod+Ctrl+s mode "default"
-}
-
-bindsym $mod+Ctrl+s mode "s"
-
 # new containers on workspace levels start off on default layout mode
 workspace_layout default
 
 focus_follows_mouse no
 
 # i3-gaps
-gaps inner 30
+gaps inner 20
 gaps outer 0
 
 # Disable window titlebars and border
-for_window [class="^.*"] border pixel 0
+for_window [class=".*"] border pixel 0
 
 
 ########## Auto Start ##########
@@ -185,13 +168,15 @@ exec_always --no-startup-id "picom --experimental-backends"
 
 # -R restores the last colorscheme that was in use.
 #exec_always --no-startup-id wal -R
-exec_always --no-startup-id feh --bg-scale ~/Pictures/Wal/NightCity.png
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/aurora-cool.jpg
+
+exec_always --no-startup-id autotiling
 
 # Redshift-gtk (system tray icon)
 #exec_always --no-startup-id redshift-gtk
 
 # Redshift location-finding
-exec_always --no-startup-id /usr/lib/geoclue-2.0/demos/agent
+#exec_always --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 
 
 
@@ -204,20 +189,28 @@ bindsym $mod+Shift+g exec google-chrome-stable
 bindsym $mod+Shift+n exec google-chrome-stable --incognito
 
 # Rofi
-bindsym $mod+d exec rofi -show run
+# bindsym $mod+d exec rofi -show run
+
+# KRunner
+set $menu --no-startup-id qdbus org.kde.krunner /App display
+bindsym $mod+d exec $menu
 
 # System Settings
 bindsym $mod+Shift+s exec systemsettings5
 
-# Nautilus
-bindsym $mod+n exec nautilus
+# File Manager
+bindsym $mod+n exec dolphin
 
-bindsym $mod+Shift+t exec lutris
+bindsym $mod+Shift+t exec "notify-send screenshot"
+#exec lutris
 
 # Screenshot
-bindsym Print exec "maim -u | tee ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H:%M:%S).png | xclip -selection clipboard -t image/png"
-#; notify-send 'Screenshot Captured'"
-bindsym Shift+Print exec "maim -su | tee ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H:%M:%S).png | xclip -selection clipboard -t image/png"
+#bindsym Shift+Mod4+s exec "notify-send 'screenshot 2'"
+#bindsym Ctrl+Shift+Mod4+s exec "notify-send 'screenshot 3'"
+
+# "maim -u | tee ~/Pictures/screenshots/$(date +%Y-%m-%d_%H:%M:%S).png | xclip -selection clipboard -t image/png"
+bindsym Shift+Mod4+s exec "maim -u | tee ~/Pictures/screenshots/$(date +%Y-%m-%d_%H:%M:%S).png | xclip -selection clipboard -t image/png"
+bindsym Ctrl+Shift+Mod4+s exec "maim -su | tee ~/Pictures/screenshots/$(date +%Y-%m-%d_%H:%M:%S).png | xclip -selection clipboard -t image/png"
 #; notify-send 'Screenshot Captured'"
 
 
@@ -234,11 +227,16 @@ for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
 # Avoid tiling popups, dropdown windows from plasma
 for_window [class="plasmashell"] floating enable
-for_window [class="Plasma"] floating enable
-for_window [class="krunner"] floating enable
-for_window [class="Kmix"] floating enable
-for_window [class="Klipper"] floating enable
-for_window [class="Plasmoidviewer"] floating enable
+for_window [class="Plasma"] floating enable; border none
+for_window [class="plasma-desktop"] floating enable; border none
+for_window [class="win7"] floating enable; border none
+for_window [class="krunner"] floating enable; border none
+for_window [class="Kmix"] floating enable; border none
+for_window [class="Klipper"] floating enable; border none
+for_window [class="Plasmoidviewer"] floating enable; border none
+for_window [class="(?i)*nextcloud*"] floating disable
+# for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px
+# no_focus [class="plasmashell" window_type="notification"]
 for_window [class="matplotlib"] floating enable
 
 
@@ -255,31 +253,21 @@ for_window [window_type="menu"] floating enable
 
 no_focus [class="plasmashell"]
 
-
-# move floating windows with keys
-bindsym $mod+m mode "move" focus floating
-mode "move" {
-    bindsym $mod+Tab focus right
-
-    bindsym Left  move left
-    bindsym Down  move down
-    bindsym Up    move up
-    bindsym Right move right
-
-    bindsym j     move down
-    bindsym k     move up
-    bindsym l     move left
-    bindsym semicolon     move right 
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-    bindsym $mod+m mode "default"
-}
-
-
-
 # Unity
 for_window [title="Starting Unity..."] floating enable
 
 # Zoom chat window floating when screenshare
-for_window [class="zoom" title="Chat"] floating enable
+#for_window [class="zoom" title="Chat"] floating enable
+#for_window [class="zoom" title="Zoom Cloud Meetings"] floating enable
+#for_window [title="Zoom - Licensed Account"] floating enable
+#for_window [class="zoom" title="Settings"] floating enable
+#for_window [class="^join\?action=join" title="Settings"] floating enable
+#for_window [class="zoom" title="zoom"] floating enable
+#for_window [class="^join\?action=join" title="Chat"] floating enable
+for_window [class="zoom"] floating enable
+for_window [class="^join\?action=join"] floating enable
+for_window [title="Zoom Meeting"] floating disable
+
+# Simics
+for_window [class="Simics-common"] floating enable
+# for_window [class="Simics"] floating enable

@@ -9,32 +9,38 @@ set backspace=indent,eol,start
 filetype plugin indent on
 
 " Switch syntax highlighting on
-syntax on
+" syntax on
 
 " Show line numbers
-set relativenumber
+set number " relativenumber
+
+" set smartindent
 
 " Allow hidden buffers, don't limit to 1 file per window/split
 set hidden
 
 set mouse=a
 
-" noremap l h
-" noremap ; l
-" noremap h ;
-
-" noremap ; :
+noremap ; :
 nnoremap <C-c> :!g++ -o  %:r.out %<Enter>
 nnoremap <C-x> :!./%:r.out
 autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -o %:r<CR>
 autocmd filetype cpp nnoremap <F10> :!./%:r < in<CR>
 
+
+" let g:tex_flavor = 'latex'
+let g:vimtex_view_method = 'zathura'
+
 call plug#begin()
 Plug 'lervag/vimtex'
 Plug 'neovim/nvim-lspconfig'
 Plug 'fladson/vim-kitty'
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'github/copilot.vim'
+Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
+Plug 'tpope/vim-sleuth'
 call plug#end()
-
 
 noremap <C-J> <C-W>j
 noremap <C-K> <C-W>k
@@ -44,10 +50,24 @@ noremap <C-P> <C-W>l
 set tabstop=4
 set shiftwidth=4
 
-let g:tex_flavor = 'latex'
-let g:vimtex_view_general_viewer = 'zathura'
+set ignorecase
+set smartcase
 
 set background=dark
 
-set ignorecase
-set smartcase
+
+" Tokyo Night color scheme config
+let g:tokyonight_style = "night"
+let g:tokyonight_italic_comments = 0
+let g:tokyonight_italic_keywords = 0
+
+let g:tokyonight_colors = {
+  \ 'bg': '#181b28',
+  \ 'error': '#ff0000'
+\ }
+
+" Load the colorscheme
+colorscheme tokyonight
+
+lua require('treesitter')
+lua require('lsp-config')
