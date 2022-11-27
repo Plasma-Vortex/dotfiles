@@ -496,13 +496,11 @@ handle_mime() {
 
         ## JSON
         application/json)
-            echo ">> JSON"
             "$EDITOR" "${FPATH}"
             exit 0;;
 
         ## Empty files
         inode/x-empty)
-            echo ">> Empty"
             "$EDITOR" "${FPATH}"
             exit 0;;
     esac
@@ -560,7 +558,6 @@ handle_bin() {
     esac
 }
 
-echo ">> nuke ${FPATH}"
 MIMETYPE="$( file -bL --mime-type -- "${FPATH}" )"
 handle_extension
 handle_multimedia "${MIMETYPE}"

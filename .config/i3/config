@@ -202,7 +202,6 @@ bindsym $mod+Shift+s exec systemsettings5
 bindsym $mod+n exec dolphin
 
 bindsym $mod+Shift+t exec "notify-send screenshot"
-#exec lutris
 
 # Screenshot
 #bindsym Shift+Mod4+s exec "notify-send 'screenshot 2'"
@@ -234,6 +233,7 @@ for_window [class="krunner"] floating enable; border none
 for_window [class="Kmix"] floating enable; border none
 for_window [class="Klipper"] floating enable; border none
 for_window [class="Plasmoidviewer"] floating enable; border none
+for_window [class="kscreen_osd_service"] floating enable; border none
 for_window [class="(?i)*nextcloud*"] floating disable
 # for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px
 # no_focus [class="plasmashell" window_type="notification"]
@@ -257,17 +257,9 @@ no_focus [class="plasmashell"]
 for_window [title="Starting Unity..."] floating enable
 
 # Zoom chat window floating when screenshare
-#for_window [class="zoom" title="Chat"] floating enable
-#for_window [class="zoom" title="Zoom Cloud Meetings"] floating enable
-#for_window [title="Zoom - Licensed Account"] floating enable
-#for_window [class="zoom" title="Settings"] floating enable
-#for_window [class="^join\?action=join" title="Settings"] floating enable
-#for_window [class="zoom" title="zoom"] floating enable
-#for_window [class="^join\?action=join" title="Chat"] floating enable
 for_window [class="zoom"] floating enable
 for_window [class="^join\?action=join"] floating enable
 for_window [title="Zoom Meeting"] floating disable
 
 # Simics
 for_window [class="Simics-common"] floating enable
-# for_window [class="Simics"] floating enable
