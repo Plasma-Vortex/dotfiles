@@ -3,7 +3,7 @@
 (mainly notes for myself, unless someone else wants to replicate this exact setup)
 
 ## Linux Distribution
-EndeavourOS
+[EndeavourOS](https://endeavouros.com/)
 
 ## Packages to install
 `pacman -S plasma i3-gaps`
