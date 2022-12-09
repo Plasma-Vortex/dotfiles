@@ -1,0 +1,12 @@
+[user]
+	email = howardhalim@gmail.com
+	name = Howard Halim
+	signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMQAJWE8E5nmPaVSM/jOJT/aPjGsb8vfkf2bQ6I/7Cnp howardhalim@gmail.com
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[push]
+	autoSetupRemote = true

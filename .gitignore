@@ -4,6 +4,7 @@
 # Files in the home directory
 !README.md
 !.gitignore
+!.gitconfig
 !.bashrc
 
 # User scripts
