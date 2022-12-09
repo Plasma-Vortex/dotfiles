@@ -1,0 +1,64 @@
+# Ignore everything by default.
+*
+
+# Files in the home directory
+!README.md
+!.gitignore
+!.bashrc
+
+# User scripts
+!bin/
+!bin/**
+
+# Config folder
+!.config/
+!.config/compton/
+!.config/compton/**
+!.config/dunst/
+!.config/dunst/**
+!.config/i3/
+!.config/i3/**
+!.config/kitty/
+!.config/kitty/**
+!.config/picom/
+!.config/picom/**
+!.config/polybar/
+!.config/polybar/**
+!.config/ranger/
+!.config/ranger/**
+!.config/redshift/
+!.config/redshift/**
+!.config/rofi/
+!.config/rofi/**
+!.config/zathura/
+!.config/zathura/**
+
+# Fish
+!.config/fish/
+!.config/fish/**
+.config/fish/fish_variables
+.config/fish/completions/fisher.fish
+.config/fish/completions/nvm.fish
+.config/fish/completions/poetry.fish
+.config/fish/conf.d/nvm.fish
+.config/fish/functions/_nvm_index_update.fish
+.config/fish/functions/_nvm_list.fish
+.config/fish/functions/_nvm_version_activate.fish
+.config/fish/functions/_nvm_version_deactivate.fish
+.config/fish/functions/fisher.fish
+.config/fish/functions/nvm.fish
+
+# Neovim
+!.config/nvim/
+!.config/nvim/**
+.config/nvim/plugged
+
+# NNN
+!.config/nnn/
+!.config/nnn/plugins/
+!.config/nnn/plugins/nuke
+
+# plasma-i3 service
+!.config/systemd/
+!.config/systemd/user/
+!.config/systemd/user/plasma-i3.service
