@@ -263,3 +263,6 @@ for_window [title="Zoom Meeting"] floating disable
 
 # Simics
 for_window [class="Simics-common"] floating enable
+
+# EndeavourOS Welcome
+for_window [class="Yad"] floating enable
