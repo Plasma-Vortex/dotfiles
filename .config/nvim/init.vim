@@ -14,7 +14,7 @@ filetype plugin indent on
 " Show line numbers
 set number " relativenumber
 
-" set smartindent
+set smartindent
 
 " Allow hidden buffers, don't limit to 1 file per window/split
 set hidden
@@ -54,7 +54,6 @@ set ignorecase
 set smartcase
 
 set background=dark
-
 
 " Tokyo Night color scheme config
 let g:tokyonight_style = "night"
