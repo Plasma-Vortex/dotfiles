@@ -56,14 +56,9 @@ set smartcase
 set background=dark
 
 " Tokyo Night color scheme config
-let g:tokyonight_style = "night"
+let g:tokyonight_style = "storm"
 let g:tokyonight_italic_comments = 0
 let g:tokyonight_italic_keywords = 0
-
-let g:tokyonight_colors = {
-  \ 'bg': '#181b28',
-  \ 'error': '#ff0000'
-\ }
 
 " Load the colorscheme
 colorscheme tokyonight
