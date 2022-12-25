@@ -63,3 +63,8 @@
 !.config/systemd/
 !.config/systemd/user/
 !.config/systemd/user/plasma-i3.service
+
+# Wallpaper
+!Pictures/
+!Pictures/wallpapers/
+!Pictures/wallpapers/current-wallpaper.jpg

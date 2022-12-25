@@ -168,7 +168,7 @@ exec_always --no-startup-id "picom --experimental-backends"
 
 # -R restores the last colorscheme that was in use.
 #exec_always --no-startup-id wal -R
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/aurora-cool.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/current-wallpaper.jpg
 
 exec_always --no-startup-id autotiling
 
