@@ -66,7 +66,12 @@
 !.config/systemd/user/
 !.config/systemd/user/plasma-i3.service
 
+# Autostart
+!.config/autostart/
+!.config/autostart/**
+
 # Wallpaper
 !Pictures/
 !Pictures/wallpapers/
 !Pictures/wallpapers/current-wallpaper.jpg
+
