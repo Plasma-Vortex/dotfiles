@@ -120,7 +120,7 @@ bindsym $mod+Shift+c reload
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# resize window (you can also use the mouse for that)
+# resize window (you can also use $mod + right click)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -129,16 +129,16 @@ mode "resize" {
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
         # Think of it as moving the bottom-right corner of the window
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize shrink width 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize grow height 5 px or 5 ppt
+        bindsym k resize shrink height 5 px or 5 ppt
+        bindsym l resize shrink width 5 px or 5 ppt
+        bindsym semicolon resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape or $mod1r
         bindsym Return mode "default"
@@ -171,6 +171,9 @@ exec_always --no-startup-id "picom --experimental-backends"
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/current-wallpaper.jpg
 
 exec_always --no-startup-id autotiling
+
+# Maps Caps Lock to Escape for vim
+exec_always --no-startup-id setxkbmap -option caps:escape
 
 # Redshift-gtk (system tray icon)
 #exec_always --no-startup-id redshift-gtk
