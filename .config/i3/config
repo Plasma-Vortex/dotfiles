@@ -21,7 +21,6 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec kitty
-bindsym $mod+Shift+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+q kill
@@ -60,8 +59,8 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -204,12 +203,7 @@ bindsym $mod+Shift+s exec systemsettings5
 # File Manager
 bindsym $mod+n exec dolphin
 
-bindsym $mod+Shift+t exec "notify-send screenshot"
-
 # Screenshot
-#bindsym Shift+Mod4+s exec "notify-send 'screenshot 2'"
-#bindsym Ctrl+Shift+Mod4+s exec "notify-send 'screenshot 3'"
-
 # "maim -u | tee ~/Pictures/screenshots/$(date +%Y-%m-%d_%H:%M:%S).png | xclip -selection clipboard -t image/png"
 bindsym Shift+Mod4+s exec "maim -u | tee ~/Pictures/screenshots/$(date +%Y-%m-%d_%H:%M:%S).png | xclip -selection clipboard -t image/png"
 bindsym Ctrl+Shift+Mod4+s exec "maim -su | tee ~/Pictures/screenshots/$(date +%Y-%m-%d_%H:%M:%S).png | xclip -selection clipboard -t image/png"
