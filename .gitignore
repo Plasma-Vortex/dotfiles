@@ -56,6 +56,10 @@
 !.config/nvim/**
 .config/nvim/plugged
 
+# Helix
+!.config/helix/
+!.config/helix/**
+
 # NNN
 !.config/nnn/
 !.config/nnn/plugins/
@@ -75,4 +79,3 @@
 !Pictures/
 !Pictures/wallpapers/
 !Pictures/wallpapers/current-wallpaper.jpg
-

@@ -1,0 +1,15 @@
+theme = "tokyonight_storm"
+
+[editor]
+cursorline = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[keys.normal]
+";" = "command_mode"
+":" = "collapse_selection"
+
+[keys.select]
+"C-S-j" = "join_selections_space"
+"C-S-k" = "remove_selections"
