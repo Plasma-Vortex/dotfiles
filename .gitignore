@@ -61,10 +61,11 @@
 !.config/nnn/plugins/
 !.config/nnn/plugins/nuke
 
-# plasma-i3 service
+# systemd user services
 !.config/systemd/
 !.config/systemd/user/
 !.config/systemd/user/plasma-i3.service
+!.config/systemd/user/ssh-agent.service
 
 # Autostart
 !.config/autostart/

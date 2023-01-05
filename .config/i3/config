@@ -26,10 +26,10 @@ bindsym $mod+Return exec kitty
 bindsym $mod+q kill
 
 # change focus
+bindsym $mod+h focus right
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus left
-bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -38,10 +38,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
+bindsym $mod+Shift+h move right
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move left
-bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -49,11 +49,11 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
-bindsym $mod+h split h
-
 # split in vertical orientation
 bindsym $mod+v split v
+
+# split in horizontal orientation
+bindsym $mod+Shift+v split h
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -71,9 +71,6 @@ bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
-
-# focus the child container
-bindsym $mod+c focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -113,39 +110,11 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
-# resize window (you can also use $mod + right click)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        # Think of it as moving the bottom-right corner of the window
-        bindsym j resize grow height 5 px or 5 ppt
-        bindsym k resize shrink height 5 px or 5 ppt
-        bindsym l resize shrink width 5 px or 5 ppt
-        bindsym semicolon resize grow width 5 px or 5 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 5 px or 5 ppt
-        bindsym Down resize grow height 5 px or 5 ppt
-        bindsym Up resize shrink height 5 px or 5 ppt
-        bindsym Right resize grow width 5 px or 5 ppt
-
-        # back to normal: Enter or Escape or $mod1r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
-}
-
-bindsym $mod+r mode "resize"
 
 # new containers on workspace levels start off on default layout mode
 workspace_layout default
@@ -185,23 +154,17 @@ exec_always --no-startup-id setxkbmap -option caps:escape
 ########## Shortcuts ##########
 
 # Browser
-bindsym $mod+g exec firefox
-bindsym $mod+Shift+p exec firefox --private-window
-bindsym $mod+Shift+g exec google-chrome-stable
-bindsym $mod+Shift+n exec google-chrome-stable --incognito
-
-# Rofi
-# bindsym $mod+d exec rofi -show run
+bindsym $mod+m exec firefox
+bindsym $mod+Shift+m exec firefox --private-window
+bindsym $mod+g exec google-chrome-stable
+bindsym $mod+Shift+g exec google-chrome-stable --incognito
 
 # KRunner
 set $menu --no-startup-id qdbus org.kde.krunner /App display
-bindsym $mod+d exec $menu
+bindsym $mod+r exec $menu
 
 # System Settings
 bindsym $mod+Shift+s exec systemsettings5
-
-# File Manager
-bindsym $mod+n exec dolphin
 
 # Screenshot
 # "maim -u | tee ~/Pictures/screenshots/$(date +%Y-%m-%d_%H:%M:%S).png | xclip -selection clipboard -t image/png"

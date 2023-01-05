@@ -6,5 +6,5 @@ function use_nvmrc --on-variable PWD
         return
     end
 
-    nvm use > /dev/null
+    nvm use &> /dev/null
 end
