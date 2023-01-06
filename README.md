@@ -1,10 +1,10 @@
 # Dotfiles
 - Linux Distribution: [EndeavourOS](https://endeavouros.com/)
-- Desktop Environment: KDE Plasma
-- Window Manager: i3
-- Compositor: picom
-- Terminal: kitty
-- Shell: fish
+- Desktop Environment: [KDE Plasma](https://kde.org/plasma-desktop/)
+- Window Manager: [i3](https://i3wm.org/)
+- Terminal: [kitty](https://sw.kovidgoyal.net/kitty/)
+- Shell: [fish](https://fishshell.com/)
+- Editor: [Neovim](https://neovim.io/) (although I'm currently trying out [Helix](https://helix-editor.com/))
 
 ## Setup Instructions
 
@@ -14,3 +14,4 @@
 - Run `bin/dotfile-symlinks.sh` to create symlinks
 - To set up KDE with i3, follow [these instructions](https://archive.ph/YqPKX#Use_a_different_window_manager).
 - KDE Global Theme: [Sweet KDE](https://store.kde.org/p/1294174/)
+- Run `tide configure` to configure the fish prompt (after installing the plugins in `.config/fish/fish_plugins` with fisher)
