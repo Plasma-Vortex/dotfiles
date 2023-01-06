@@ -11,5 +11,5 @@ insert = "bar"
 ":" = "collapse_selection"
 
 [keys.select]
-"C-S-j" = "join_selections_space"
-"C-S-k" = "remove_selections"
+";" = "command_mode"
+":" = "collapse_selection"
