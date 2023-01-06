@@ -23,14 +23,8 @@
 !.config/kitty/**
 !.config/picom/
 !.config/picom/**
-!.config/polybar/
-!.config/polybar/**
-!.config/ranger/
-!.config/ranger/**
 !.config/redshift/
 !.config/redshift/**
-!.config/rofi/
-!.config/rofi/**
 !.config/zathura/
 !.config/zathura/**
 
