@@ -111,10 +111,6 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+r reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # new containers on workspace levels start off on default layout mode
 workspace_layout default
@@ -134,21 +130,9 @@ for_window [class=".*"] border pixel 0
 # Starts picom
 exec_always --no-startup-id "picom --experimental-backends"
 
-# -R restores the last colorscheme that was in use.
-#exec_always --no-startup-id wal -R
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/current-wallpaper.jpg
 
 exec_always --no-startup-id autotiling
-
-# Maps Caps Lock to Escape for vim
-exec_always --no-startup-id setxkbmap -option caps:escape
-
-# Redshift-gtk (system tray icon)
-#exec_always --no-startup-id redshift-gtk
-
-# Redshift location-finding
-#exec_always --no-startup-id /usr/lib/geoclue-2.0/demos/agent
-
 
 
 ########## Shortcuts ##########
@@ -160,8 +144,7 @@ bindsym $mod+g exec google-chrome-stable
 bindsym $mod+Shift+g exec google-chrome-stable --incognito
 
 # KRunner
-set $menu --no-startup-id qdbus org.kde.krunner /App display
-bindsym $mod+r exec $menu
+bindsym $mod+r exec --no-startup-id qdbus org.kde.krunner /App display
 
 # System Settings
 bindsym $mod+Shift+s exec systemsettings5
@@ -212,6 +195,10 @@ for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
 no_focus [class="plasmashell"]
+
+
+
+
 
 # Unity
 for_window [title="Starting Unity..."] floating enable

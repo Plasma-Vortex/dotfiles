@@ -7,6 +7,10 @@
 !.gitconfig
 !.bashrc
 
+# Root directory symlink targets
+!.root/
+!.root/**
+
 # User scripts
 !bin/
 !bin/**
