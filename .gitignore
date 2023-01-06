@@ -17,10 +17,6 @@
 
 # Config folder
 !.config/
-!.config/compton/
-!.config/compton/**
-!.config/dunst/
-!.config/dunst/**
 !.config/i3/
 !.config/i3/**
 !.config/kitty/
