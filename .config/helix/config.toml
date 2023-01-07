@@ -1,4 +1,4 @@
-theme = "tokyonight_storm"
+theme = "my_tokyonight_storm"
 
 [editor]
 cursorline = true
