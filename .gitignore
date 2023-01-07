@@ -25,8 +25,6 @@
 !.config/picom/**
 !.config/redshift/
 !.config/redshift/**
-!.config/zathura/
-!.config/zathura/**
 
 # Fish
 !.config/fish/
