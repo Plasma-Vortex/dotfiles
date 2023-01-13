@@ -7,9 +7,17 @@ cursorline = true
 insert = "bar"
 
 [keys.normal]
-";" = "command_mode"
-":" = "collapse_selection"
+# ";"   = "command_mode"
+# ":"   = "collapse_selection"
+"~"     = "switch_to_uppercase"
+"A-`"   = "switch_case"
+# "C-9" = "rotate_selection_contents_backward"
+# "C-0" = "rotate_selection_contents_forward"
 
 [keys.select]
-";" = "command_mode"
-":" = "collapse_selection"
+# ";"   = "command_mode"
+# ":"   = "collapse_selection"
+"~"     = "switch_to_uppercase"
+"A-`"   = "switch_case"
+# "C-9" = "rotate_selection_contents_backward"
+# "C-0" = "rotate_selection_contents_forward"

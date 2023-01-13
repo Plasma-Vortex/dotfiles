@@ -1,3 +1,6 @@
 inherits = "tokyonight_storm"
 
-"diagnostic.error" = { underline = { style = "curl", color = "red" } }
+"diagnostic.error"   = { underline = { style = "curl", color = "red" } }
+"diagnostic.warning" = { underline = { style = "curl", color = "yellow" } }
+"diagnostic.info"    = { underline = { style = "curl", color = "blue" } }
+"diagnostic.hint"    = { underline = { style = "curl", color = "teal" } }
