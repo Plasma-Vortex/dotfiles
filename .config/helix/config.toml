@@ -14,6 +14,11 @@ insert = "bar"
 # "C-9" = "rotate_selection_contents_backward"
 # "C-0" = "rotate_selection_contents_forward"
 
+[keys.normal.space]
+w = ":write"
+q = ":quit"
+x = ":write-quit"
+
 [keys.select]
 # ";"   = "command_mode"
 # ":"   = "collapse_selection"
@@ -21,3 +26,8 @@ insert = "bar"
 "A-`"   = "switch_case"
 # "C-9" = "rotate_selection_contents_backward"
 # "C-0" = "rotate_selection_contents_forward"
+
+[keys.select.space]
+w = ":write"
+q = ":quit"
+x = ":write-quit"
