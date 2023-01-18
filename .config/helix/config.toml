@@ -30,4 +30,3 @@ x = ":write-quit"
 [keys.select.space]
 w = ":write"
 q = ":quit"
-x = ":write-quit"
