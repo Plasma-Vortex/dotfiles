@@ -1,3 +1,3 @@
-function chrome --wraps=google-chrome-stable --description 'alias chrome=google-chrome-stable'
+function chrome --wraps=google-chrome-stable --description 'Google Chrome'
     google-chrome-stable $argv; 
 end
