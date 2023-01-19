@@ -10,3 +10,7 @@ chktex = { onEdit = true }
 [[language]]
 name = "toml"
 language-server = { command = "" }
+
+[[language]]
+name = "cpp"
+indent = { tab-width = 4, unit = "    " }
