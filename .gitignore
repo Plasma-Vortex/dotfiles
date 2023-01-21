@@ -42,6 +42,7 @@
 .config/fish/functions/fish_prompt.fish
 .config/fish/functions/fish_mode_prompt.fish
 .config/fish/functions/fisher.fish
+.config/fish/themes/
 
 # Neovim
 !.config/nvim/
@@ -67,7 +68,11 @@
 !.config/autostart/
 !.config/autostart/**
 
+# Bottom
+!.config/bottom/
+!.config/bottom/**
+
 # Wallpaper
 !Pictures/
 !Pictures/wallpapers/
-!Pictures/wallpapers/current-wallpaper.jpg
+!Pictures/wallpapers/current-wallpaper

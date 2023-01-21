@@ -1,31 +1,32 @@
-theme = "my_tokyonight_storm"
+theme = "my_catppuccin_mocha"
 
 [editor]
 cursorline = true
+color-modes = true
 
 [editor.cursor-shape]
 insert = "bar"
 
+[editor.indent-guides]
+render = true
+character = "▎"
+
 [keys.normal]
-# ";"   = "command_mode"
-# ":"   = "collapse_selection"
 "~"     = "switch_to_uppercase"
 "A-`"   = "switch_case"
-# "C-9" = "rotate_selection_contents_backward"
-# "C-0" = "rotate_selection_contents_forward"
+# waiting on https://github.com/helix-editor/helix/pull/4939
+# "C-(" = "rotate_selection_contents_backward"
+# "C-)" = "rotate_selection_contents_forward"
 
 [keys.normal.space]
 w = ":write"
 q = ":quit"
-x = ":write-quit"
 
 [keys.select]
-# ";"   = "command_mode"
-# ":"   = "collapse_selection"
 "~"     = "switch_to_uppercase"
 "A-`"   = "switch_case"
-# "C-9" = "rotate_selection_contents_backward"
-# "C-0" = "rotate_selection_contents_forward"
+# "C-(" = "rotate_selection_contents_backward"
+# "C-)" = "rotate_selection_contents_forward"
 
 [keys.select.space]
 w = ":write"
