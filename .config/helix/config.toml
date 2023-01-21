@@ -7,6 +7,12 @@ color-modes = true
 [editor.cursor-shape]
 insert = "bar"
 
+[editor.whitespace.render]
+newline = "all"
+
+[editor.whitespace.characters]
+newline = "⤶"
+
 [editor.indent-guides]
 render = true
 character = "▎"

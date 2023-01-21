@@ -6,11 +6,32 @@ build = { onSave = true, forwardSearchAfter = true }
 forwardSearch = { executable = "zathura", args = [ "--synctex-forward", "%l:1:%f", "%p" ] }
 chktex = { onEdit = true }
 
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'$' = '$'
+
+
 # Temporary fix until https://github.com/tamasfe/taplo/pull/354 is merged
 [[language]]
 name = "toml"
 language-server = { command = "" }
 
+
 [[language]]
 name = "cpp"
 indent = { tab-width = 4, unit = "    " }
+
+
+[[language]]
+name = "rust"
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+"'" = "'"
+'"' = '"'
+'`' = '`'
+'<' = '>'
