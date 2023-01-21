@@ -1,3 +1,11 @@
+function gs --description 'git status'
+    git status;
+end
+
+function ga --description 'git add .'
+    git add .;
+end
+
 function gc --description 'git commit'
     _ssh_add
     git commit $argv;
@@ -17,4 +25,12 @@ function _ssh_add --description 'Add SSH Git key to agent'
 
     # git key hasn't been added yet, so add it now
     ssh-add "$git_private_key_file"
+end
+
+function gp --description 'git push'
+    git push
+end
+
+function gd --description 'git diff'
+    git difftool --no-symlinks --dir-diff $argv
 end
