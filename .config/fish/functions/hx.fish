@@ -1,3 +1,3 @@
 function hx --wraps=helix --description 'Helix Editor'
-    helix $argv;
+    helix $argv
 end

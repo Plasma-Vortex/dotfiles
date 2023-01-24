@@ -1,14 +1,14 @@
 function gs --description 'git status'
-    git status;
+    git status
 end
 
 function ga --description 'git add .'
-    git add .;
+    git add -A
 end
 
 function gc --description 'git commit'
     _ssh_add
-    git commit $argv;
+    git commit $argv
 end
 
 function _ssh_add --description 'Add SSH Git key to agent'
