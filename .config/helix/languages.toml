@@ -22,16 +22,3 @@ language-server = { command = "" }
 [[language]]
 name = "cpp"
 indent = { tab-width = 4, unit = "    " }
-
-
-[[language]]
-name = "rust"
-
-[language.auto-pairs]
-'(' = ')'
-'{' = '}'
-'[' = ']'
-"'" = "'"
-'"' = '"'
-'`' = '`'
-'<' = '>'

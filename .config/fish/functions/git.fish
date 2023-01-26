@@ -27,8 +27,8 @@ function _ssh_add --description 'Add SSH Git key to agent'
     ssh-add "$git_private_key_file"
 end
 
-function gp --description 'git push'
-    git push
+function gp --description 'git pull'
+    git pull
 end
 
 function gd --description 'git diff'
