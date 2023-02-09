@@ -4,7 +4,7 @@
 - Window Manager: [i3](https://i3wm.org/)
 - Terminal: [kitty](https://sw.kovidgoyal.net/kitty/)
 - Shell: [fish](https://fishshell.com/)
-- Editor: [Neovim](https://neovim.io/) (although I'm currently trying out [Helix](https://helix-editor.com/))
+- Editor: [Helix](https://helix-editor.com/)
 
 ## Setup Instructions
 
