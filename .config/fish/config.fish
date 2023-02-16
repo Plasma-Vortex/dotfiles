@@ -5,5 +5,11 @@ if status is-interactive
     set -gx EDITOR helix
 
     set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
+
+    if test -n "$PYTHONPATH"
+        set -x PYTHONPATH '/usr/lib/python3.10/site-packages/pdm/pep582' $PYTHONPATH
+    else
+        set -x PYTHONPATH '/usr/lib/python3.10/site-packages/pdm/pep582'
+    end
 end
 
