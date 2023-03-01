@@ -11,5 +11,11 @@ if status is-interactive
     else
         set -x PYTHONPATH '/usr/lib/python3.10/site-packages/pdm/pep582'
     end
-end
 
+    # >>> conda initialize >>>
+    # !! Contents within this block are managed by 'conda init' !!
+    if test -f /home/howard/miniconda3/bin/conda
+        eval /home/howard/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+    end
+    # <<< conda initialize <<<
+end
