@@ -503,6 +503,11 @@ handle_mime() {
         inode/x-empty)
             "$EDITOR" "${FPATH}"
             exit 0;;
+
+        ## Javascript
+        application/javascript)
+            "$EDITOR" "${FPATH}"
+            exit 0;;
     esac
 }
 
