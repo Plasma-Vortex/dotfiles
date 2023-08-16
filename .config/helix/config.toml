@@ -4,6 +4,9 @@ theme = "my_catppuccin_mocha"
 cursorline = true
 color-modes = true
 
+[editor.statusline]
+right = ["diagnostics", "selections", "file-encoding", "spacer", "version-control"]
+
 [editor.cursor-shape]
 insert = "bar"
 
@@ -22,23 +25,23 @@ enable = true
 
 
 [keys.normal]
-"~"     = "switch_to_uppercase"
-"A-`"   = "switch_case"
-# waiting on https://github.com/helix-editor/helix/pull/4939
-# "C-(" = "rotate_selection_contents_backward"
-# "C-)" = "rotate_selection_contents_forward"
+"~"   = "switch_to_uppercase"
+"A-`" = "switch_case"
+C-9   = "rotate_selection_contents_backward"
+C-0   = "rotate_selection_contents_forward"
 
 [keys.normal.space]
 w = ":write"
 q = ":quit"
-h = ":toggle lsp.display-inlay-hints"
+l = ":toggle lsp.display-inlay-hints"
 
 [keys.select]
-"~"     = "switch_to_uppercase"
-"A-`"   = "switch_case"
-# "C-(" = "rotate_selection_contents_backward"
-# "C-)" = "rotate_selection_contents_forward"
+"~"   = "switch_to_uppercase"
+"A-`" = "switch_case"
+C-9   = "rotate_selection_contents_backward"
+C-0   = "rotate_selection_contents_forward"
 
 [keys.select.space]
 w = ":write"
 q = ":quit"
+l = ":toggle lsp.display-inlay-hints"
