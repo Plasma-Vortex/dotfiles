@@ -1,3 +1,5 @@
+pyenv init - | source
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
     zoxide init fish | source
@@ -5,6 +7,9 @@ if status is-interactive
     set -gx EDITOR helix
 
     set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
+
+    # Load pyenv-virtualenv automatically by adding
+    source (pyenv virtualenv-init -|psub)
 
     # >>> conda initialize >>>
     # !! Contents within this block are managed by 'conda init' !!
